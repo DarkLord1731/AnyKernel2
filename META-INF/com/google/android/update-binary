@@ -83,7 +83,7 @@ if [ -f banner ]; then
   while IFS='' read -r line || $bb [[ -n "$line" ]]; do
     ui_print "$line";
   done < banner;
-  ui_print " " " ";
+  ui_print " ";
 fi;
 
 ui_print "$(file_getprop anykernel.sh kernel.string)";
@@ -94,7 +94,6 @@ if [ -f version ]; then
   done < version;
   ui_print " ";
 fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
 
 unmount_all;
 if [ ! "$(is_mounted /system)" ]; then
@@ -169,7 +168,6 @@ if [ "$supported_ver" ]; then
   fi;
 fi;
 
-ui_print "Installing...";
 core=$($bb grep -oE 'ak.*core.sh' anykernel.sh);
 test -f tools/$core || $bb ln -s $home/tools/ak*-core.sh $home/tools/$core;
 PATH="$home/bin:$PATH" home=$home $bb ash anykernel.sh $2;
@@ -220,4 +218,4 @@ test "$savedpre" && export LD_PRELOAD="$savedpre";
 
 unmount_all;
 
-ui_print " " " " "Done!";
+ui_print " " " " " ";
