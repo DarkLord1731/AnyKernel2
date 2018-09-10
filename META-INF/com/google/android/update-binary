@@ -68,7 +68,6 @@ if [ -f /tmp/anykernel/banner ]; then
     ui_print "$line";
   done < /tmp/anykernel/banner;
   ui_print " ";
-  ui_print " ";
 fi;
 
 ui_print "$(file_getprop /tmp/anykernel/anykernel.sh kernel.string)";
@@ -79,10 +78,6 @@ if [ -f /tmp/anykernel/version ]; then
   done < /tmp/anykernel/version;
   ui_print " ";
 fi;
-ui_print " ";
-ui_print "AnyKernel2 by osm0sis @ xda-developers";
-ui_print " ";
-ui_print " ";
 
 unmount_all;
 mount -o ro -t auto /system;
@@ -171,6 +166,5 @@ test "$savedpre" && export LD_PRELOAD="$savedpre";
 
 unmount_all;
 
-ui_print " ";
 ui_print " ";
 ui_print "Done!";
