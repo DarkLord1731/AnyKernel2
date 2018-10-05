@@ -1,0 +1,5 @@
+# OXYGEN KERNEL INITIALISATION
+#
+on property:sys.boot_completed=1
+    setprop ro.oxygen.version ##VERSION##
+    setprop ro.oxygen.device ##DEVICE##

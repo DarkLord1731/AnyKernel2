@@ -60,6 +60,10 @@ replace_file init.spectrum.rc 644 init.spectrum.rc;
 replace_file init.spectrum.sh 755 init.spectrum.sh;
 insert_line init.samsungexynos7870.rc "import init.spectrum.rc" after "import init.fac.rc" "import init.spectrum.rc";
 
+# Add init.oxygen.rc
+replace_file init.oxygen.rc 644 init.oxygen.rc;
+insert_line init.samsungexynos7870.rc "import init.oxygen.rc" after "import init.spectrum.rc" "import init.oxygen.rc";
+
 write_boot;
 
 ## end install
