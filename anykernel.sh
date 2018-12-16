@@ -10,6 +10,7 @@ do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=
+supported.versions=
 '; } # end properties
 
 # shell variables
