@@ -1,0 +1,7 @@
+ro.config.tima=0
+ro.securestorage.support=false
+ro.securestorage.knox=false
+ro.security.vaultkeeper.native=0
+ro.config.dmverity=false
+ro.config.rkp=false
+ro.config.kap=false
