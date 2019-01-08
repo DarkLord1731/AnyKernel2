@@ -33,8 +33,9 @@ ui_print "- Unpacking boot image";
 dump_boot;
 
 # Replace FSTAB
-ui_print "- Installing new fstab";
-replace_file fstab.samsungexynos7870 755 fstab.samsungexynos7870;
+ui_print "- Disabling forced encryption";
+patch_fstab fstab.samsungexynos7870 /data ext4 flags "wait,check,forceencrypt=footer,quota" "wait,check,encryptable=footer,quota";
+patch_fstab fstab.samsungexynos7885 /data ext4 flags "wait,check,forceencrypt=footer,quota" "wait,check,encryptable=footer,quota";
 
 # Enable Spectrum Support
 ui_print "- Setting Up Spectrum";
