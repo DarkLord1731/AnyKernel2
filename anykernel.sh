@@ -32,10 +32,6 @@ ui_print "- Unpacking boot image";
 ## AnyKernel install
 dump_boot;
 
-# Replace FSTAB
-ui_print "- Installing new fstab";
-replace_file fstab.samsungexynos7870 755 fstab.samsungexynos7870;
-
 # Enable Spectrum Support
 ui_print "- Setting Up Spectrum";
 replace_file init.spectrum.rc 644 init.spectrum.rc;
