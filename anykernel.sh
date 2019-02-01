@@ -18,7 +18,7 @@ supported.versions=
 '; } # end properties
 
 # shell variables
-block=/dev/block/platform/13540000.dwmmc0/by-name/BOOT;
+block=/dev/block/platform/13500000.dwmmc0/by-name/BOOT;
 is_slot_device=0;
 ramdisk_compression=auto;
 
@@ -34,13 +34,13 @@ dump_boot;
 
 # Replace FSTAB
 ui_print "- Installing new fstab";
-replace_file fstab.samsungexynos7870 755 fstab.samsungexynos7870;
+replace_file fstab.samsungexynos7885 755 fstab.samsungexynos7885;
 
 # Enable Spectrum Support
 ui_print "- Setting Up Spectrum";
 replace_file init.spectrum.rc 644 init.spectrum.rc;
 replace_file init.spectrum.sh 755 init.spectrum.sh;
-insert_line init.samsungexynos7870.rc "import init.spectrum.rc" after "import init.fac.rc" "import init.spectrum.rc";
+insert_line init.samsungexynos7885.rc "import init.spectrum.rc" after "import init.fac.rc" "import init.spectrum.rc";
 
 # Samsung TW fixes
 ui_print "- Disabling some useless samsung stuff";
